@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bai01_QuanLyChuyenXe", "Mod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bai02_QuanLyThuVien", "Module_03\Bai02_QuanLyThuVien\Bai02_QuanLyThuVien.csproj", "{FD791A81-2FC5-4E8F-B7E7-73ADBF6CC07B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bai03_QuanLyGiaoDich", "Module_03\Bai03_QuanLyGiaoDich\Bai03_QuanLyGiaoDich.csproj", "{AEC69313-3DF9-2672-5CDD-EE6991FFC094}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FD791A81-2FC5-4E8F-B7E7-73ADBF6CC07B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD791A81-2FC5-4E8F-B7E7-73ADBF6CC07B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD791A81-2FC5-4E8F-B7E7-73ADBF6CC07B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEC69313-3DF9-2672-5CDD-EE6991FFC094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEC69313-3DF9-2672-5CDD-EE6991FFC094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEC69313-3DF9-2672-5CDD-EE6991FFC094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEC69313-3DF9-2672-5CDD-EE6991FFC094}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
