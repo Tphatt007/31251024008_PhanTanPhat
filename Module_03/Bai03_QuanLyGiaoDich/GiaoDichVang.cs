@@ -13,18 +13,19 @@ using System.IO;
 
 
 
-public class GiaoDichVang : GiaoDich {
+public class GiaoDichVang : GiaoDich
+{
 
-	private string loaivang;
+    private string loaivang;
 
-	public GiaoDichVang(string a, int b, double c, int d, string loaivang):base(a, b, c, d)
+    public GiaoDichVang(string a, int b, double c, int d, string loaivang) : base(a, b, c, d)
     {
-		this.loaivang = loaivang;
+        this.loaivang = loaivang;
     }
 
-	public override decimal ThanhTien()
-	{
-		return (decimal)(dongia * SoLuong);
+    public override decimal ThanhTien()
+    {
+        return (decimal)(dongia * SoLuong);
     }
 
 }//end GiaoDichVang

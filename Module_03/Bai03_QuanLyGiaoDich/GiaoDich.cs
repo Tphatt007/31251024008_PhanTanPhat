@@ -13,38 +13,39 @@ using System.IO;
 
 
 
-public abstract class GiaoDich {
+public abstract class GiaoDich
+{
 
-	public double dongia { get; }
-	public string magd { get; }
-	public int ngaygd { get; }
-	private int soluong;
+    public double dongia { get; }
+    public string magd { get; }
+    public int ngaygd { get; }
+    private int soluong;
 
-	public int SoLuong
-	{
-			get { return soluong; }
-		set { if (value > 0) soluong = value; }
+    public int SoLuong
+    {
+        get { return soluong; }
+        set { if (value > 0) soluong = value; }
     }
 
-	public GiaoDich(string magd, int ngaygd, double dongia, int soluong)
-	{
-		this.magd = magd;
-		this.ngaygd = ngaygd;
-		this.dongia = dongia;
-		this.soluong = soluong;
+    public GiaoDich(string magd, int ngaygd, double dongia, int soluong)
+    {
+        this.magd = magd;
+        this.ngaygd = ngaygd;
+        this.dongia = dongia;
+        this.soluong = soluong;
     }
 
-	
-	public virtual decimal ThanhTien()
-	{
-		return (decimal)(dongia * soluong);
+
+    public virtual decimal ThanhTien()
+    {
+        return (decimal)(dongia * soluong);
     }
-	public static void ToString(GiaoDich gd)
-	{
-		Console.WriteLine("Ma GD: " + gd.magd);
-		Console.WriteLine("Ngay GD: " + gd.ngaygd);
-		Console.WriteLine("Don Gia: " + gd.dongia);
-		Console.WriteLine("So Luong: " + gd.soluong);
-		Console.WriteLine("Thanh Tien: " + gd.ThanhTien());
+    public static void ToString(GiaoDich gd)
+    {
+        Console.WriteLine("Ma GD: " + gd.magd);
+        Console.WriteLine("Ngay GD: " + gd.ngaygd);
+        Console.WriteLine("Don Gia: " + gd.dongia);
+        Console.WriteLine("So Luong: " + gd.soluong);
+        Console.WriteLine("Thanh Tien: " + gd.ThanhTien());
     }
 }//end GiaoDich
