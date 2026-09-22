@@ -74,26 +74,44 @@ public class ListSach
 
     public double timThanhTienCaoNhat()
     {
-
-        return 0;
+        double max = 0;
+        foreach (Sach sach in list)
+        {
+            double thanhTien = sach.getThanhTien();
+            if (thanhTien > max)
+            {
+                max = thanhTien;
+            }
+        }
+        return max;
     }
 
     public double tinhTongThanhTienSGK()
     {
-
-        return 0;
+        double tong = 0;
+        foreach (Sach sach in list)
+        {
+            if (sach is SachGiaoKhoa)
+                tong += sach.getThanhTien();
+        }
+        return tong;
     }
 
     public double tinhTongThanhTienSTK()
     {
-
-        return 0;
+        double tong = 0;
+        foreach (Sach sach in list)
+        {
+            if (sach is SachThamKhao)
+                tong += sach.getThanhTien();
+        }
+        return tong;
     }
 
     public string toString()
     {
-
-        return "";
+        return "So luong sach hien co: "+count +
+            "\nDanh sach cac sach: " + string.Join("\n===============================\n", list);
     }
 
 }//end ListSach
