@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            SachGiaoKhoa sachGiaoKhoa = new SachGiaoKhoa("SGK001", DateTime.Now, 100000, 10, "NXB Giao Duc", Tinhtrang.Moi);
+            Console.WriteLine(sachGiaoKhoa.ToString());
             Console.ReadKey();
         }
     }

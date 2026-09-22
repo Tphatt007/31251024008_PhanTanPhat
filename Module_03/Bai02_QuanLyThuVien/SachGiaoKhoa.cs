@@ -12,62 +12,69 @@ using System.Text;
 using System.IO;
 
 
+public enum Tinhtrang
+{
+    Moi,
+    Cu,
+}
+public class SachGiaoKhoa : Sach
+{
 
-public class SachGiaoKhoa : Sach {
+    private Tinhtrang tinhtrang;
+    
+    public Tinhtrang TinhTrang
+    {
+        get { return tinhtrang; }
+        set { tinhtrang = value; }
+    }
+    /// 
+    /// <param name="MaSach"></param>
+    /// <param name="NgayNhap"></param>
+    /// <param name="DonGia"></param>
+    /// <param name="SoLuong"></param>
+    /// <param name="NhaXuatBan"></param>
+    /// <param name="TinhTrang"></param>
+    public SachGiaoKhoa(string MaSach, DateTime NgayNhap, double DonGia, int SoLuong, string NhaXuatBan, Tinhtrang TinhTrang)
+        : base(MaSach, NgayNhap, DonGia, SoLuong, NhaXuatBan)
+    {
+        this.TinhTrang = TinhTrang;
+    }
 
-	private bool TinhTrang;
+    public SachGiaoKhoa()
+    {
 
+    }
 
+    /// <summary>
+    /// override
+    /// </summary>
+    public override double getThanhTien()
+    {
 
-	~SachGiaoKhoa(){
+        return DonGia*SoLuong;
+    }
 
-	}
+    /// 
+    /// <param name="TinhTrang"></param>
+    public void setTinhTrang(Tinhtrang TinhTrang)
+    {
+        this.TinhTrang = TinhTrang;
+    }
 
-	/// 
-	/// <param name="MaSach"></param>
-	/// <param name="NgayNhap"></param>
-	/// <param name="DonGia"></param>
-	/// <param name="SoLuong"></param>
-	/// <param name="NhaXuatBan"></param>
-	/// <param name="TinhTrang"></param>
-	public SachGiaoKhoa(string MaSach, DateTime NgayNhap, double DonGia, int SoLuong, string NhaXuatBan, bool TinhTrang){
+    public Tinhtrang getTinhTrang()
+    {
 
-	}
+        return TinhTrang;
+    }
 
-	public SachGiaoKhoa(){
-
-	}
-
-	/// <summary>
-	/// override
-	/// </summary>
-	public double getThanhTien(){
-
-		return 0;
-	}
-
-	/// 
-	/// <param name="TinhTrang"></param>
-	public void getTinhTrang(bool TinhTrang){
-
-	}
-
-	public bool getTinhTrang(){
-
-		return false;
-	}
-
-	/// <summary>
-	/// override
-	/// </summary>
-	public string toString(){
-
-		return "";
-	}
-
-	public override string ToString(){
-
-		return "";
-	}
+    /// <summary>
+    /// override
+    /// </summary>
+    
+    public override string ToString()
+        
+    {
+        return base.ToString() + "\nTinh trang: "+TinhTrang;
+    }
 
 }//end SachGiaoKhoa

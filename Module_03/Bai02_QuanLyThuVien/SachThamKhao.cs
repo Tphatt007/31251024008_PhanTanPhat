@@ -13,45 +13,54 @@ using System.IO;
 
 
 
-public class SachThamKhao : Sach {
+public class SachThamKhao :Sach
+{
 
-	private double Thue;
+    private double thue;
 
+    public double Thue
+    {
+        get { return thue; }
+        set { if (value >= 0) thue = value; }
+    }
+    /// 
+    /// <param name="MaSach"></param>
+    /// <param name="NgayNhap"></param>
+    /// <param name="DonGia"></param>
+    /// <param name="SoLuong"></param>
+    /// <param name="NhaXuatBan"></param>
+    /// <param name="Thue"></param>
+    public SachThamKhao(string MaSach, DateTime NgayNhap, double DonGia, int SoLuong, string NhaXuatBan, double Thue)
+        :base(MaSach, NgayNhap, DonGia, SoLuong, NhaXuatBan)
+    {
+        this.Thue = Thue;
+    }
 
+    public SachThamKhao()
+    {
 
-	~SachThamKhao(){
+    }
 
-	}
+    public double getThue()
+    {
 
-	/// 
-	/// <param name="MaSach"></param>
-	/// <param name="NgayNhap"></param>
-	/// <param name="DonGia"></param>
-	/// <param name="SoLuong"></param>
-	/// <param name="NhaXuatBan"></param>
-	/// <param name="Thue"></param>
-	public SachThamKhao(string MaSach, DateTime NgayNhap, double DonGia, int SoLuong, string NhaXuatBan, double Thue){
+        return Thue;
+    }
 
-	}
+    /// 
+    /// <param name="Thue"></param>
+    public void setThue(double Thue)
+    {
+        this.Thue = Thue;
+    }
 
-	public SachThamKhao(){
-
-	}
-
-	public double getThue(){
-
-		return 0;
-	}
-
-	/// 
-	/// <param name="Thue"></param>
-	public void getThue(double Thue){
-
-	}
-
-	public double ThanhTien(){
-
-		return 0;
-	}
+    public override double getThanhTien()
+    {
+        return DonGia*SoLuong*Thue;
+    }
+    public override string ToString()
+    {
+        return base.ToString() + "\nThue: " + Thue;
+    }
 
 }//end SachThamKhao
