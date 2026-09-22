@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bai02_QuanLyThuVien", "Modu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bai03_QuanLyGiaoDich", "Module_03\Bai03_QuanLyGiaoDich\Bai03_QuanLyGiaoDich.csproj", "{AEC69313-3DF9-2672-5CDD-EE6991FFC094}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bai04_TaoMenuCase", "Module_03\Bai04_TaoMenuCase\Bai04_TaoMenuCase.csproj", "{820F9233-8579-40D3-8AD3-EFF6B5BCA7DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{AEC69313-3DF9-2672-5CDD-EE6991FFC094}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEC69313-3DF9-2672-5CDD-EE6991FFC094}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEC69313-3DF9-2672-5CDD-EE6991FFC094}.Release|Any CPU.Build.0 = Release|Any CPU
+		{820F9233-8579-40D3-8AD3-EFF6B5BCA7DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{820F9233-8579-40D3-8AD3-EFF6B5BCA7DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{820F9233-8579-40D3-8AD3-EFF6B5BCA7DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{820F9233-8579-40D3-8AD3-EFF6B5BCA7DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
