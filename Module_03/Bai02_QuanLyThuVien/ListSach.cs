@@ -26,7 +26,7 @@ public class ListSach
 
     public ListSach()
     {
-
+        list = new List<Sach>();
     }
     public ListSach(int Count)
     {
@@ -37,7 +37,11 @@ public class ListSach
     /// <param name="Sach"></param>
     public bool them(Sach SachMoi)
     {
-        if(SachMoi == null)
+        if (list.Count > count)
+        {
+            return false;
+        }
+        if (SachMoi == null)
         {
             return false;
         }
@@ -49,6 +53,7 @@ public class ListSach
             }
         }
         list.Add(SachMoi);
+        count++;
         return true;
     }
 
@@ -110,7 +115,7 @@ public class ListSach
 
     public string toString()
     {
-        return "So luong sach hien co: "+count +
+        return "So luong sach hien co: "+list.Count +
             "\nDanh sach cac sach: " + string.Join("\n===============================\n", list);
     }
 
